@@ -6,7 +6,7 @@ export default defineNuxtConfig({
     staticFilename: '[name]-[hash][ext]',
   },
   strapi: {
-    url: 'https://backend-f2t9.onrender.com',
+    url: 'https://hallelacademybackend-c66769e5af51.herokuapp.com',
   },
   modules: [
     '@nuxtjs/strapi',
