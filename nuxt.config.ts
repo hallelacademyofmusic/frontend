@@ -1,29 +1,24 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  image: {
-    staticFilename: '[name]-[hash][ext]',
-  },
-  strapi: {
-    url: 'https://hallelacademybackend-c66769e5af51.herokuapp.com',
-  },
-  modules: [
-    '@nuxtjs/strapi',
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
-    'shadcn-nuxt',
-    '@nuxt/image'
-  ],
-  shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
-    prefix: '',
-    /**
-     * Directory that the component lives in.
-     * @default "./components/ui"
-     */
-    componentDir: './components/ui'
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { 
+          rel: 'preconnect', 
+          href: 'https://fonts.googleapis.com' 
+        },
+        { 
+          rel: 'preconnect', 
+          href: 'https://fonts.gstatic.com',
+          crossorigin: '' 
+        },
+        { 
+          rel: 'stylesheet', 
+          href: 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap' 
+        }
+      ]
+    }
   }
 })
