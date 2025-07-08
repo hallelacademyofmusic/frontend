@@ -1,12 +1,29 @@
+<script setup>
+ import { IconPhoneRinging, IconBarrierBlock, IconMail } from '@tabler/icons-vue';
+
+</script>
+
 <template>
   <div class="wrapper">
 
     <div class="content">
+      <span class="under-construction">
+        <IconBarrierBlock size="24" />
+        Under Construction
+        <IconBarrierBlock size="24" />
+      </span>
       <a class="logo" href="/">
         <img src="/hallel-academy-logo.svg" alt="Hallel Academy of Music">
       </a>
       <h1 class="title">Inspiring Musical Excellence</h1>
-      <a class="phone" href="tel:+13433070153">tel: 343-307-0153</a>
+      <a class="phone" href="tel:+13433070153">
+        <IconPhoneRinging size="24" />
+        <span>343-307-0153</span>
+      </a>
+      <a class="email" href="mailto:info@hallelacademy.com">
+        <IconMail size="24" />
+        <span>info@hallelacademy.com</span>
+      </a>
     </div>
   </div>
 
@@ -40,6 +57,18 @@ h1 {
   justify-content: center;
 }
 
+.under-construction {
+  color: #F6BE55;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  justify-content: center;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+}
+
 .content {
   text-align: center;
 }
@@ -53,10 +82,27 @@ h1 {
 .phone {
   display: block;
   margin: 1rem auto;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #FFF;
   text-decoration: none;
   font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.email {
+  display: block;
+  margin: 1rem auto;
+  font-size: 1.4rem;
+  color: #FFF;
+  text-decoration: none;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 img {
